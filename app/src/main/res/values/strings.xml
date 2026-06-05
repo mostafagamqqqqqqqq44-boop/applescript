@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">سكربت التفاحه</string>
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="account_id">معرف الحساب</string>
+    <string name="secret_code">الكود السري</string>
+    <string name="login_button">دخول</string>
+    <string name="welcome">مرحباً بك</string>
+    <string name="code_expires_in">ينتهي خلال</string>
+    <string name="seconds">ثانية</string>
+    <string name="invalid_credentials">بيانات الدخول غير صحيحة</string>
+    <string name="enter_account_id">أدخل معرف الحساب</string>
+    <string name="enter_code">أدخل الكود السري</string>
+</resources>
