@@ -23,13 +23,15 @@ jobs:
 
     - name: Download Gradle
       run: |
-        wget https://services.gradle.org/distributions/gradle-8.2-bin.zip
-        unzip gradle-8.2-bin.zip
-        export PATH=$PATH:$PWD/gradle-8.2/bin
+        wget https://services.gradle.org/distributions/gradle-8.5-bin.zip
+        unzip gradle-8.5-bin.zip
+        export GRADLE_HOME=$PWD/gradle-8.5
+        export PATH=$GRADLE_HOME/bin:$PATH
 
     - name: Build Debug APK
       run: |
-        export PATH=$PATH:$PWD/gradle-8.2/bin
+        export GRADLE_HOME=$PWD/gradle-8.5
+        export PATH=$GRADLE_HOME/bin:$PATH
         gradle assembleDebug
 
     - name: Upload Debug APK
@@ -41,7 +43,8 @@ jobs:
 
     - name: Build Release APK
       run: |
-        export PATH=$PATH:$PWD/gradle-8.2/bin
+        export GRADLE_HOME=$PWD/gradle-8.5
+        export PATH=$GRADLE_HOME/bin:$PATH
         gradle assembleRelease
       continue-on-error: true
 
